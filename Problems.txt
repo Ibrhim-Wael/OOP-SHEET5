@@ -1,0 +1,65 @@
+Sheet 5
+Problem 1: Bank System for Secure Money Transfer
+Between Accounts
+- Objective:
+Implement a simple banking system using C++ with two classes:
+BankAccount and Transaction. The BankAccount class should manage
+individual account balances, and the Transaction class should handle
+transferring money between accounts, including executing and canceling
+transactions.
+- Requirements:
+1. BankAccount Class:
+Private Attributes: accountID (int) and balance (double).
+Constructor: initializes accountID and balance.
+Methods:
+deposit: Adds money to the account balance.
+getBalance() const: Returns the current balance of the account.
+Friend class: Transaction (to allow direct access to balance).
+2. Transaction Class:
+Private Attributes: fromAccount (reference to BankAccount),
+toAccount (reference to BankAccount), amount (double), and
+completed (bool).
+Constructor: initializes the transaction with the accounts involved and
+the transaction amount.
+Methods:
+execute(): Executes the transaction by transferring the amount
+from fromAccount to toAccount, if there are sufficient funds.
+cancel(): Cancels the transaction, returning the amount back to
+fromAccount and deducting it from toAccount, if the transaction
+has been completed.
+3. Main Program:
+Create two BankAccount objects with initial balances.
+Create a Transaction object to transfer money between the two
+accounts.
+Execute the transaction, display the updated balances, then cancel the
+transaction and display the final balances.
+----------------------------------------------------------------------------------------------------------
+Question 2: Vehicle Management System
+- Objective:
+Create a vehicle management system that tracks vehicles and their
+mileage, using a static member to track the total number of vehicles in the
+system.
+- Requirements:
+1. Vehicle Class:
+Private Attributes:
+vehicleID: (int) constant to uniquely identify the vehicle.
+modelName: (string) constant to store the vehicle’s model name.
+mileage: (double) to store the vehicle’s mileage.
+totalVehicles: (static int) to count the total number of vehicles in
+the system and start the total number with 10.
+Methods:
+Constructor: Initializes the vehicle with a unique vehicleID,
+modelName, and initial mileage. Updates the static totalVehicles
+counter.
+drive(): Increases the mileage of the vehicle by the given number
+of miles.
+getMileage() const: Returns the current mileage of the vehicle.
+static int getTotalVehicles(): Returns the total number of
+vehicles across the system.
+2. Program Workflow:
+- Create multiple Vehicle objects.
+- Track the total number of vehicles using the static member in the
+Vehicle class.
+- Simulate driving a vehicle and track how its mileage increases.
+- create a constant object and try the last step again.
+----------------------------------------------------------------------------------------------------------
